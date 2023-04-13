@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" id="num">
+    <input type="button" id="btn" value="구구단">
+    <div id="guguArea">
+
+    </div>
+  </body>
+  <script>
+    // let button = document.getElementById('btn');
+    // button.addEventListener('click',function(){
+    //   for(let i=1; i<=9;i++){
+    //     let textLine = (document.getElementById('textLine').value);
+    //     let x = textLine * i;
+    //     (document.getElementById('guguArea').innerHTML += textLine+"*"+i+"="+x+"<br>");
+    //   }
+    // });
+
+    let button = document.getElementById('btn');
+    button.addEventListener('click',function(){
+      let num = Number(document.getElementById('num').value);
+      document.getElementById("guguArea").innerHTML = "";
+      for(let i=1; i<=9;i++){
+         document.getElementById("guguArea").innerHTML += `${guguArea} X ${i} = ${guguArea*i} <br>`;
+    });
+  </script>
+</html>

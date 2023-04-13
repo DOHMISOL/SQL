@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    arr
+  </body>
+  <script>
+    // let arr2D = [];
+    // arr2D[0] = [];
+    // arr2D[1] = [];
+    // arr2D[2] = [];
+    // arr2D[3] = [];
+    // arr2D[4] = [];
+    // for(let i = 0; i<5;i++){
+    //   arr2D[i] = [];
+    //   arr2D[i][0] = i;
+    //   arr2D[i][1] = i+1;
+    //   arr2D[i][3] = i+2;
+    // }
+    let arr1 = [];
+    let num = 1;
+    for(let i = 0; i < 5; i++){
+      arr1[i] = [];
+      for(let j = 0; j < 5; j++){
+        arr1[i][j] = num++;
+      }
+    }
+      console.log(arr1);
+
+    let arr2 =[];
+    for(let i = 0; i < 5; i++){
+      arr2[i] = [];
+      for(let j = 0; j < 5; j++){
+        arr2[i][j] = (15*i)+(j*3)+1;
+      }
+    }
+      console.log(arr2);
+
+    let arr3 =[];
+    for(let i = 0; i < 5; i++){
+      arr3[i] = [];
+      for(let j = 0; j < 5; j++){
+        arr3[i][j]  = i*j;
+      }
+    }
+      console.log(arr3);
+
+    let arr4 =[];
+    for(let i = 0; i < 5; i++){
+      arr4[i] = []
+      for(let j = 0; j < 5; j++){
+        arr4[i][j] = String(i)+String(j);
+        //arr4[i][j] = `${i}${j}`; 같은표현
+      }
+
+    }
+      console.log(arr4);
+
+    let arr5 = [];
+    let num1 = 0;
+    for(let i=0; i<5;i++){
+      arr5[i] = [];
+      for(let j=0;j<5;j++){
+        arr5[i][j] = num1;
+        num1 +=i*2 + j*3;
+      }
+    }
+    console.log(arr5);
+
+    let arr6 = [];
+    for(let i=1; i<10;i=i+3){
+      arr6[(i+2)/3-1] = [];
+      for(let j=0; j<5;j++){
+        arr6[(i+2)/3-1][j] = i*j;
+      }
+    }
+    console.log(arr6);
+
+
+  </script>
+</html>
