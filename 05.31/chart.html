@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div id="chart_div"></div>
+    두산퓨얼셀
+  </body>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    let express = require('express');
+    let request = require('request');
+    let cheerio = require('cheerio');
+
+    function fetchStockPrice() {
+      fetch('https://finance.naver.com/item/main.naver?code=336260')
+       .then(response => response.text())
+       .then(body => {
+         let $ = cheerio.load(body);
+         let todayInfo = $('.today').text();
+         console.log('현재 주가는:', todayInfo);
+       })
+       .catch(error => {
+         console.error('Error fetching stock price:', error);
+       });
+   }
+
+  </script>
+</html>
